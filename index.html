@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gift Shop</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style/style.css">
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#"><i class="fa fa-gift"></i> Gift Shop</a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navContent">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cart">
+                        <i class="fa fa-cart-arrow-down"></i>
+                        <span id="shopping-cart" class="badge bg-danger">0</span>
+                    </a>
+                </li>
+                <li class="nav-item ms-lg-3">
+                    <button onclick="toggleDark()" class="btn btn-outline-light btn-sm mt-1">
+                        <i class="fa fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<section class="hero text-center text-light">
+<h1>The Perfect Gift <i class="fa fa-gift"></i></h1>
+<p>Send gifts in Berlin</p>
+</section>
+
+<div class="container text-center my-3">
+<input type="text" id="search" class="form-control w-50 mx-auto" placeholder="Search...">
+</div>
+
+<div class="text-center">
+<button onclick="filterProducts('all')" class="btn filter-btn m-1">All</button>
+<button onclick="filterProducts('cake')" class="btn filter-btn m-1">Cake</button>
+<button onclick="filterProducts('flower')" class="btn filter-btn  m-1">Flower</button>
+<button onclick="filterProducts('watch')" class="btn filter-btn m-1">Watch</button>
+<button onclick="filterProducts('jewellery')" class="btn filter-btn m-1">Jewellery</button>
+<button onclick="filterProducts('chocolate')" class="btn filter-btn m-1">Chocolate</button>
+<button onclick="filterProducts('box')" class="btn filter-btn m-1">Suprice Box</button>
+</div>
+
+<div class="container my-5">
+    <div class="row" id="products">
+        
+    </div>
+</div>
+
+
+<div class="container">
+<h3>Shopping Cart <i class="fa-solid fa-cart-arrow-down"></i></h3>
+<ul id="cart-list" class="list-group"></ul>
+<h4 id="total"></h4>
+</div>
+<div class="modal fade" id="productModal">
+<div class="modal-dialog">
+<div class="modal-content bg-dark text-white">
+
+<div class="modal-header">
+<h5 id="modalTitle"></h5>
+<button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+<p id="modalPrice"></p>
+</div>
+
+</div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
